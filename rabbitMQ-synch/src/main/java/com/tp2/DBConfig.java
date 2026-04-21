@@ -9,7 +9,7 @@ public class DBConfig {
     public static final String BO2_URL = "jdbc:mysql://localhost:3306/db_bo2?useSSL=false&allowPublicKeyRetrieval=true";
 
     public static final String DB_USER = "root";
-    public static final String DB_PASS = "0000"; 
+    public static final String DB_PASS = "585"; 
 
     // RabbitMQ
     public static final String MQ_HOST   = "localhost";

@@ -35,11 +35,11 @@ public class HOConsumer_OneQueue {
                 ps.setDouble(8, Double.parseDouble(parts[8]));
                 ps.executeUpdate();
                 System.out.println("[HO] Inséré depuis " + source + " : " + parts[3]);
-            } catch (SQLException e) {
+            } catch (SQLException e) {//problème d'insertion
                 e.printStackTrace();
             }
         };
 
-        channel.basicConsume(DBConfig.QUEUE, true, callback, t -> {});
+        channel.basicConsume(DBConfig.QUEUE, true, callback, t -> {});// autoAck = true, callback de livraison, callback de cancel
     }
 }
